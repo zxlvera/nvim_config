@@ -1,3 +1,4 @@
+require('luasnip.loaders.from_vscode').lazy_load()
 local cmp_status_ok, cmp = pcall(require, "cmp")
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if cmp_status_ok and snip_status_ok then
@@ -37,6 +38,7 @@ if cmp_status_ok and snip_status_ok then
   }),
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'buffer' },
     { name = 'luasnip' },
   },
 }

@@ -27,16 +27,17 @@ if not lspconfig_status_ok then
 	return
 end
 
--- local lsphandlers_status_ok, lsphandler = pcall(require, "plugins.lsp.lsp-handlers")
+local lsphandlers_status_ok, lsphandler = pcall(require, "plugins.lsp.lsp-handlers")
 
 local on_attach = require('plugins.lsp.lsp-handlers').on_attach
-local capabilities = require("plugins.lsp.lsp-handlers").capabilities
 
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
-for _, lsp in pairs(servers) do
-	lspconfig[lsp].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+-- nvim-cmp supports additional completion capabilities
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
 end
