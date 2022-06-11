@@ -1,8 +1,20 @@
 if vim.fn.exists("g:vscode") == 0 then
 
-  local g, cmd, opt = vim.g, vim.cmd, vim.opt
+  local g, cmd, fn, opt = vim.g, vim.cmd, vim.fn, vim.opt
   local o, wo, bo = vim.o, vim.wo, vim.bo
   local map = require('utils').map
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+
+  if fn.empty(fn.glob(install_path)) > 0 then
+    packer_bootstrap = fn.system({
+      "git",
+      "clone",
+      "--depth",
+      "1",
+      "https://github.com/wbthomason/packer.nvim",
+      install_path,
+    })
+  end
 
   g.mapleader = ' '
   opt.number = true
