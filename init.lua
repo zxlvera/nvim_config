@@ -32,6 +32,7 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.gitsigns')
   require('config.neo-tree')
   require('config.null-ls')
+  require('config.trouble')
   require('config.which-key')
 
   -- Key Mappings

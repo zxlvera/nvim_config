@@ -23,7 +23,10 @@ return require('packer').startup(function(use)
   use 'rafamadriz/friendly-snippets'
 
   -- Diganostics
-  use {'jose-elias-alvarez/null-ls.nvim', requires = {{ 'nvim-lua/plenary.nvim'}}}
+  use { 'folke/trouble.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+  }
+  use { 'jose-elias-alvarez/null-ls.nvim', requires = {{ 'nvim-lua/plenary.nvim'}}}
 
   -- Pretty symbols, Color scheme, Status Line
   use 'kyazdani42/nvim-web-devicons'
