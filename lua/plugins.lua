@@ -48,7 +48,11 @@ return require('packer').startup(function()
   }
 
   use 'lewis6991/gitsigns.nvim'
+
+  if packer_bootstrap then
+    require('packer').sync()
   end
+end
 )
 
 
