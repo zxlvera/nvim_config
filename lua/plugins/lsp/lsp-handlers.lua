@@ -62,7 +62,7 @@ M.on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi',
         '<cmd>lua vim.lsp.buf.implementation()<CR>',
         opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>',
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-s>',
         '<cmd>lua vim.lsp.buf.signature_help()<CR>',
         opts)
     -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa',
@@ -83,8 +83,8 @@ M.on_attach = function(client, bufnr)
         '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',
         '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-S-f>',
-    --                             '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-f>',
+                                 '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
     if client.server_capabilities.document_highlight then
         vim.cmd [[
             hi! LspReferenceRead cterm=bold ctermbg=red guibg=#49494A
