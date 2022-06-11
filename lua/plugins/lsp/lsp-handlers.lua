@@ -37,7 +37,8 @@ M.setup = function()
         opts)
     vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>',
         opts)
-    vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+    vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>TroubleToggle<CR>', opts)
+    -- vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
@@ -78,7 +79,7 @@ M.on_attach = function(client, bufnr)
         opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn',
         '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ac',
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca',
         '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',
         '<cmd>lua vim.lsp.buf.references()<CR>', opts)
@@ -119,7 +120,7 @@ M.on_attach = function(client, bufnr)
                 prefix = ' ',
                 scope = 'cursor',
             }
-            vim.diagnostic.open_float(nil, opts)
+          vim.diagnostic.open_float(nil, opts)
         end
     })
 end
