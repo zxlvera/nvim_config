@@ -30,6 +30,9 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope-ui-select.nvim'
   }
+  use {
+    'nvim-telescope/telescope-fzy-native.nvim'
+  }
 
   -- Pretty symbols, Color scheme, Status Line
   use 'kyazdani42/nvim-web-devicons'
