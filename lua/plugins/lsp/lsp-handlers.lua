@@ -84,7 +84,7 @@ M.on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',
         '<cmd>lua vim.lsp.buf.references()<CR>', opts)
      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-f>',
-                                 '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+                                 '<cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts)
     if client.server_capabilities.document_highlight then
         vim.cmd [[
             hi! LspReferenceRead cterm=bold ctermbg=red guibg=#49494A
