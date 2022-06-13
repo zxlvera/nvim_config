@@ -10,6 +10,7 @@ if vim.fn.exists("g:vscode") == 0 then
 
   g.mapleader = ' '
   g.cursorhold_updatetime = 100
+  opt.mouse = 'a'
   opt.number = true
   opt.relativenumber = true
   opt.tabstop = 2
