@@ -18,6 +18,7 @@ if vim.fn.exists("g:vscode") == 0 then
   opt.softtabstop = 2
   opt.expandtab = true
   opt.completeopt = {'menu', 'menuone', 'noselect'}
+  opt.laststatus = 3
 
   -- Colorscheme
   opt.termguicolors = true
