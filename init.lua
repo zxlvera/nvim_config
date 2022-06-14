@@ -32,6 +32,7 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.cmp')
   require('config.commented')
   require('config.gitsigns')
+  require('config.git-worktree')
   require('config.neo-tree')
   require('config.null-ls')
   require('config.telescope')
@@ -48,8 +49,9 @@ if vim.fn.exists("g:vscode") == 0 then
   map('n', '<c-k>', '<c-w>k')
   map('n', '<c-l>', '<c-w>l')
 
+  map('n', '<Leader>g', ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
   map("n", "<Leader>e", ":NeoTreeFloatToggle<CR>")
-  map("n", "<Leader>g", ":Neotree float git_status<CR>")
   map("n", "<Leader>b", ":Neotree float buffers<CR>")
   map("n", "<Leader>ff", ":Telescope find_files<CR>")
+  map("n", "<Leader>fg", ":Neotree float git_status<CR>")
 end

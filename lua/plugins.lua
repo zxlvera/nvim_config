@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
   }
 
   use 'lewis6991/gitsigns.nvim'
+  use 'ThePrimeagen/git-worktree.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
