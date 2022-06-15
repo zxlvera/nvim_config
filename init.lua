@@ -26,6 +26,8 @@ if vim.fn.exists("g:vscode") == 0 then
   -- Folders load (termguicolors need to load first)
   -- plugins.lua itself
   require('plugins')
+  require('impatient')
+
   -- folders
   require('plugins.lsp')
   require('config.feline')

@@ -3,6 +3,9 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- Startup Time
+  use 'lewis6991/impatient.nvim'
+
   -- Completion and linting
   use 'winston0410/commented.nvim'
   use {
