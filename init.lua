@@ -41,9 +41,12 @@ if vim.fn.exists("g:vscode") == 0 then
 
   -- Key Mappings
   cmd[[colorscheme nord]]
+  map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
   map("n", "<Leader>w", ":w<CR>")
+  map('n', '<S-h>', ':bprevious<CR>')
+  map('n', '<S-l>', ':bnext<CR>')
   map('n', '<c-h>', '<c-w>h')
   map('n', '<c-j>', '<c-w>j')
   map('n', '<c-k>', '<c-w>k')
@@ -51,7 +54,7 @@ if vim.fn.exists("g:vscode") == 0 then
 
   map('n', '<Leader>g', ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
   map("n", "<Leader>e", ":NeoTreeFloatToggle<CR>")
-  map("n", "<Leader>b", ":Neotree float buffers<CR>")
+  map("n", "<Leader>fb", ":Neotree float buffers<CR>")
   map("n", "<Leader>ff", ":Telescope find_files<CR>")
   map("n", "<Leader>fg", ":Neotree float git_status<CR>")
 end
