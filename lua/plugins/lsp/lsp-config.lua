@@ -35,9 +35,24 @@ local on_attach = require('plugins.lsp.lsp-handlers').on_attach
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
+local function organize_imports()
+    local params = {
+      command = "_typescript.organizeImports",
+      arguments = {vim.api.nvim_buf_get_name(0)},
+      title = ""
+    }
+    vim.lsp.buf.execute_command(params)
+end
+
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
+    commands = {
+      OrganizeImports = {
+        organize_imports,
+        description = 'organize_imports'
+      }
+    }
   }
 end
