@@ -8,11 +8,12 @@ if vim.fn.exists("g:vscode") == 0 then
     packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   end
 
+  g.import_sort_auto = 1
   g.mapleader = ' '
   g.cursorhold_updatetime = 100
   opt.mouse = 'a'
   opt.number = true
-  opt.relativenumber = true
+  -- opt.relativenumber = true
   opt.tabstop = 2
   opt.shiftwidth = 2
   opt.softtabstop = 2
@@ -42,7 +43,8 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.which-key')
 
   -- Key Mappings
-  cmd[[colorscheme nord]]
+  cmd[[ let ayucolor='mirage' ]]
+  cmd[[colorscheme ayu]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
