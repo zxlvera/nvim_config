@@ -12,7 +12,6 @@ return require('packer').startup(function(use)
     'williamboman/nvim-lsp-installer',
     'neovim/nvim-lspconfig',
 }
-  use {'ruanyl/vim-sort-imports'}
 
   -- Autocomplete
   use 'hrsh7th/cmp-buffer'
@@ -41,9 +40,9 @@ return require('packer').startup(function(use)
 
   -- Pretty symbols, Color scheme, Status Line
   use 'kyazdani42/nvim-web-devicons'
-  use 'ayu-theme/ayu-vim'
+  use 'sainnhe/gruvbox-material'
   use 'arcticicestudio/nord-vim'
-  use 'feline-nvim/feline.nvim'
+  use 'nvim-lualine/lualine.nvim'
   use 'folke/which-key.nvim'
 
   -- Search

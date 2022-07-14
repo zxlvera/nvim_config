@@ -8,7 +8,6 @@ if vim.fn.exists("g:vscode") == 0 then
     packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   end
 
-  g.import_sort_auto = 1
   g.mapleader = ' '
   g.cursorhold_updatetime = 100
   opt.mouse = 'a'
@@ -31,7 +30,7 @@ if vim.fn.exists("g:vscode") == 0 then
 
   -- folders
   require('plugins.lsp')
-  require('config.feline')
+  require('config.lualine')
   require('config.cmp')
   require('config.commented')
   require('config.gitsigns')
@@ -43,8 +42,7 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.which-key')
 
   -- Key Mappings
-  cmd[[ let ayucolor='mirage' ]]
-  cmd[[colorscheme ayu]]
+  cmd[[colorscheme gruvbox-material]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
