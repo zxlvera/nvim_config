@@ -3,6 +3,9 @@ local cmp_status_ok, cmp = pcall(require, "cmp")
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if cmp_status_ok and snip_status_ok then
 
+  luasnip.filetype_extend("typescript", { "typescriptreact" })
+  luasnip.filetype_extend("javascript", { "javascriptreact" })
+
   return cmp.setup {
     snippet = {
     expand = function(args)

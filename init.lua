@@ -10,6 +10,7 @@ if vim.fn.exists("g:vscode") == 0 then
 
   g.mapleader = ' '
   g.cursorhold_updatetime = 100
+  opt.encoding='utf8'
   opt.mouse = 'a'
   opt.number = true
   -- opt.relativenumber = true
@@ -30,6 +31,7 @@ if vim.fn.exists("g:vscode") == 0 then
 
   -- folders
   require('plugins.lsp')
+  require('config.devicons')
   require('config.lualine')
   require('config.cmp')
   require('config.commented')
