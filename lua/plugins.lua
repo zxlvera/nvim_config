@@ -6,12 +6,16 @@ return require('packer').startup(function(use)
   -- Startup Time
   use 'lewis6991/impatient.nvim'
 
-  -- Completion and linting
+  -- Sorting, Completion and linting
   use 'winston0410/commented.nvim'
   use {
     'williamboman/nvim-lsp-installer',
     'neovim/nvim-lspconfig',
 }
+  use {
+    'neoclide/coc.nvim', 
+    branch =  'release'
+  }
 
   -- Autocomplete
   use 'hrsh7th/cmp-buffer'

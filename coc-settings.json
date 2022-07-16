@@ -1,0 +1,49 @@
+{
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+  "importSorter.importStringConfiguration.quoteMark": "single",
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.importStringConfiguration.trailingComma": "none",
+  "importSorter.importStringConfiguration.hasSemicolon": true,
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      "disableSort": true,
+      "orderLevel": 1,
+      "regex": "^$",
+      "type": "importMember"
+    },
+    {
+      "numberOfEmptyLinesAfterGroup": 0,
+      "orderLevel": 10,
+      "regex": "react$"
+    },
+    {
+      "numberOfEmptyLinesAfterGroup": 0,
+      "orderLevel": 11,
+      "regex": "react-native$"
+    },
+    {
+      "numberOfEmptyLinesAfterGroup": 0,
+      "orderLevel": 30,
+      "regex": "@packages"
+    },
+    {
+      "numberOfEmptyLinesAfterGroup": 0,
+      "orderLevel": 40,
+      "regex": "@/"
+    },
+    {
+      "numberOfEmptyLinesAfterGroup": 0,
+      "orderLevel": 40,
+      "regex": "^(?![.])(App|actions|components|icons|js|providers|reducers|store|types|util)(/|$)"
+    },
+    {
+      "orderLevel": 50,
+      "regex": "^[.]"
+    }
+  ],
+  "importSorter.sortConfiguration.importMembers.order": "lowercaseFirst",
+  "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
+  "importSorter.sortConfiguration.removeUnusedImports": true
+}
