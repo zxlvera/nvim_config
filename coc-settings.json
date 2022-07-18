@@ -44,6 +44,6 @@
     }
   ],
   "importSorter.sortConfiguration.importMembers.order": "lowercaseFirst",
-  "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
+  "importSorter.sortConfiguration.removeUnusedDefaultImports": false,
   "importSorter.sortConfiguration.removeUnusedImports": true
 }
