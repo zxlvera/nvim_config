@@ -44,7 +44,7 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.which-key')
 
   -- Key Mappings
-  api.nvim_command[[autocmd FileType markdown let b:coc_suggest_disable = 1]]
+  -- api.nvim_command[[autocmd FileType markdown let b:coc_suggest_disable = 1]]
   cmd[[colorscheme gruvbox-material]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
