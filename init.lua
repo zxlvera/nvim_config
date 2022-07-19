@@ -1,6 +1,6 @@
 if vim.fn.exists("g:vscode") == 0 then
 
-  local g, cmd, fn, opt = vim.g, vim.cmd, vim.fn, vim.opt
+  local api, g, cmd, fn, opt = vim.api, vim.g, vim.cmd, vim.fn, vim.opt
   local o, wo, bo = vim.o, vim.wo, vim.bo
   local map = require('utils').map
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -44,14 +44,14 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.which-key')
 
   -- Key Mappings
-  cmd[[autocmd FileType markdown let b:coc_suggest_disable = 1]]
+  api.nvim_command[[autocmd FileType markdown let b:coc_suggest_disable = 1]]
   cmd[[colorscheme gruvbox-material]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
   map("n", "<Leader>w", ":w<CR>")
-  map('n', '<S-h>', ':bprevious<CR>')
-  map('n', '<S-l>', ':bnext<CR>')
+  map('n', '<C-[>', ':bprevious<CR>')
+  map('n', '<C-]>', ':bnext<CR>')
   map('n', '<c-h>', '<c-w>h')
   map('n', '<c-j>', '<c-w>j')
   map('n', '<c-k>', '<c-w>k')
