@@ -18,6 +18,10 @@ if status_ok then
         override_generic_sorter = false,
         override_file_sorter = true,
       },
+      file_browser = {
+        theme = "ivy",
+        hijack_netrw = true,
+      }
     },
     mappings = {
       i = {
@@ -33,6 +37,7 @@ if status_ok then
   telescope.load_extension('fzy_native')
   telescope.load_extension('git_worktree')
   telescope.load_extension('ui-select')
+  telescope.load_extension('file_browser')
   -- return telescope.extensions.git_worktree.git_worktrees()
 
 end
