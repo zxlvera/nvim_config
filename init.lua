@@ -50,8 +50,6 @@ if vim.fn.exists("g:vscode") == 0 then
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
   map("n", "<Leader>w", ":w<CR>")
-  map('n', '<C-[>', ':bprevious<CR>')
-  map('n', '<C-]>', ':bnext<CR>')
   map('n', '<c-h>', '<c-w>h')
   map('n', '<c-j>', '<c-w>j')
   map('n', '<c-k>', '<c-w>k')
@@ -59,7 +57,28 @@ if vim.fn.exists("g:vscode") == 0 then
 
   map('n', '<Leader>g', ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
   map("n", "<Leader>e", ":NeoTreeFloatToggle<CR>")
-  map("n", "<Leader>fb", ":Neotree float buffers<CR>")
+  map("n", "<Leader>eb", ":Neotree float buffers<CR>")
+  map("n", "<Leader>eg", ":Neotree float git_status<CR>")
   map("n", "<Leader>ff", ":Telescope find_files<CR>")
-  map("n", "<Leader>fg", ":Neotree float git_status<CR>")
+  map("n", "<Leader>fb", ":Telescope buffers<CR>")
+  map("n", "<Leader>fg", ":Telescope live_grep<CR>")
+  map("n", "<Leader>fh", ":Telescope help_tags<CR>")
+  map("n", "<leader>xx", "<cmd>Trouble<cr>",
+    {silent = true, noremap = true}
+  )
+  map("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>",
+    {silent = true, noremap = true}
+  )
+  map("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>",
+    {silent = true, noremap = true}
+  )
+  map("n", "<leader>xl", "<cmd>Trouble loclist<cr>",
+    {silent = true, noremap = true}
+  )
+  map("n", "<leader>xq", "<cmd>Trouble quickfix<cr>",
+    {silent = true, noremap = true}
+  )
+  map("n", "gR", "<cmd>Trouble lsp_references<cr>",
+    {silent = true, noremap = true}
+  )
 end

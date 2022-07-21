@@ -37,7 +37,6 @@ M.setup = function()
         opts)
     vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>',
         opts)
-    vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>TroubleToggle<CR>', opts)
     -- vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
 
@@ -53,7 +52,7 @@ M.on_attach = function(client, bufnr)
 
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD',
+    --[[ vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD',
         '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd',
         '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -64,7 +63,7 @@ M.on_attach = function(client, bufnr)
         opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-s>',
         '<cmd>lua vim.lsp.buf.signature_help()<CR>',
-        opts)
+        opts) --]]
     -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa',
     --                             '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>',
     --                             opts)
@@ -74,17 +73,17 @@ M.on_attach = function(client, bufnr)
     -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wl',
     --                             '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>',
     --                             opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D',
+    --[[ vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D',
         '<cmd>lua vim.lsp.buf.type_definition()<CR>',
         opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn',
-        '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+        '<cmd>lua vim.lsp.buf.rename()<CR>', opts) ]] --
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca',
         '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',
+    --[[ vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',
         '<cmd>lua vim.lsp.buf.references()<CR>', opts)
      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-f>',
-                                 '<cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts)
+                                 '<cmd>lua vim.lsp.buf.formatting_sync()<CR>', opts) --]]
     if client.server_capabilities.document_highlight then
         vim.cmd [[
             hi! LspReferenceRead cterm=bold ctermbg=red guibg=#49494A
