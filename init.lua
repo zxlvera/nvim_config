@@ -36,8 +36,7 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.cmp')
   require('config.commented')
   require('config.gitsigns')
-  require('config.git-worktree')
-  require('config.neo-tree')
+  require('config.nvim-tree')
   require('config.null-ls')
   require('config.telescope')
   require('config.trouble')
@@ -55,10 +54,13 @@ if vim.fn.exists("g:vscode") == 0 then
   map('n', '<c-k>', '<c-w>k')
   map('n', '<c-l>', '<c-w>l')
 
-  -- Neotree Keymaps
-  map("n", "<Leader>ee", ":NeoTreeShowToggle<CR>")
+  -- Nvimtree Keymaps
+  map("n", "<Leader>ee", ":NvimTreeToggle<CR>")
   map("n", "<Leader>eb", ":Neotree float buffers<CR>")
   map("n", "<Leader>eg", ":Neotree float git_status<CR>")
+  --[[ map("n", "<Leader>ee", ":NeoTreeShowToggle<CR>")
+  map("n", "<Leader>eb", ":Neotree float buffers<CR>")
+  map("n", "<Leader>eg", ":Neotree float git_status<CR>") --]]
 
   -- Telescope Keymaps
   map("n", "<Leader>fe", ":Telescope file_browser<CR>")
