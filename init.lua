@@ -55,15 +55,9 @@ if vim.fn.exists("g:vscode") == 0 then
   map('n', '<c-l>', '<c-w>l')
 
   -- Nvimtree Keymaps
-  map("n", "<Leader>ee", ":NvimTreeToggle<CR>")
-  map("n", "<Leader>eb", ":Neotree float buffers<CR>")
-  map("n", "<Leader>eg", ":Neotree float git_status<CR>")
-  --[[ map("n", "<Leader>ee", ":NeoTreeShowToggle<CR>")
-  map("n", "<Leader>eb", ":Neotree float buffers<CR>")
-  map("n", "<Leader>eg", ":Neotree float git_status<CR>") --]]
+  map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 
   -- Telescope Keymaps
-  map("n", "<Leader>fe", ":Telescope file_browser<CR>")
   map("n", "<Leader>ff", ":Telescope find_files<CR>")
   map("n", "<Leader>fb", ":Telescope buffers<CR>")
   map("n", "<Leader>fg", ":Telescope live_grep<CR>")
