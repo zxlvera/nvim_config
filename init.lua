@@ -56,7 +56,7 @@ if vim.fn.exists("g:vscode") == 0 then
   map('n', '<c-l>', '<c-w>l')
 
   -- Neotree Keymaps
-  map("n", "<Leader>e", ":NeoTreeFloatToggle<CR>")
+  map("n", "<Leader>ee", ":NeoTreeShowToggle<CR>")
   map("n", "<Leader>eb", ":Neotree float buffers<CR>")
   map("n", "<Leader>eg", ":Neotree float git_status<CR>")
 
