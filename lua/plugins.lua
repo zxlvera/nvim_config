@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
     }
   }
 
+  use 'kdheepak/lazygit.nvim'
   use 'lewis6991/gitsigns.nvim'
 
   if packer_bootstrap then

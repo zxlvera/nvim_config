@@ -56,6 +56,7 @@ if vim.fn.exists("g:vscode") == 0 then
 
   -- Nvimtree Keymaps
   map("n", "<Leader>e", ":NvimTreeToggle<CR>")
+  map("n", "<Leader>gg", ":LazyGit<CR>")
 
   -- Telescope Keymaps
   map("n", "<Leader>ff", ":Telescope find_files<CR>")
