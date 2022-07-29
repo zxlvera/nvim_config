@@ -9,6 +9,7 @@ if vim.fn.exists("g:vscode") == 0 then
   end
 
   g.mapleader = ' '
+  g.nvim_tree_respect_buf_cwd = 1
   g.cursorhold_updatetime = 100
   opt.encoding='utf8'
   opt.mouse = 'a'
