@@ -43,10 +43,6 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.which-key')
 
   -- Key Mappings
-  g.gruvbox_material_background = 'medium'
-  g.gruvbox_material_foreground = 'material'
-  g.gruvbox_material_visual='blue background'
-  g.gruvbox_material_menu_selection_background = 'blue'
   g.gruvbox_material_enable_bold = 1
   g.gruvbox_material_enable_italic = 1
   cmd[[colorscheme gruvbox-material]]
