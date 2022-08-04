@@ -1,6 +1,7 @@
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if status_ok then
   return gitsigns.setup({
+    current_line_blame = true,
     on_attach = function(bufnr)
     local gs = package.loaded.gitsigns
 
