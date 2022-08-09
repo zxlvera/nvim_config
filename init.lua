@@ -48,7 +48,8 @@ if vim.fn.exists("g:vscode") == 0 then
   cmd[[colorscheme gruvbox-material]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
-  map("n", "<C-q>", ":q<CR>")
+  map("n", "<C-w>", ":w!<CR>")
+  map("n", "<C-q>", ":wq!<CR>")
   map("n", "<Leader>w", ":w<CR>")
   map('n', '<c-h>', '<c-w>h')
   map('n', '<c-j>', '<c-w>j')
