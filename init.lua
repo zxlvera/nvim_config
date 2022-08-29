@@ -43,11 +43,9 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.which-key')
 
   -- Key Mappings
-  -- g.gruvbox_material_enable_bold = 1
-  -- g.gruvbox_material_enable_italic = 1
-  g.nord_italic = 1
-  g.nord_italic_comments = 1
-  cmd[[colorscheme nord]]
+   g.oceanic_next_terminal_bold = 1
+   g.oceanic_next_terminal_italic = 1
+  cmd[[colorscheme oceanicNext]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")

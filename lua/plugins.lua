@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'sainnhe/gruvbox-material'
   use 'arcticicestudio/nord-vim'
+  use 'mhartington/oceanic-next'
   use 'nvim-lualine/lualine.nvim'
   use 'folke/which-key.nvim'
 
