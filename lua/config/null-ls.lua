@@ -12,7 +12,7 @@ if status_ok then
               callback = function()
                   -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
                   -- vim.lsp.buf.execute_command({command = "_typescript.organizeImports", arguments = {vim.api.nvim_buf_get_name(0)}})
-                  vim.lsp.buf.formatting_seq_sync()
+                  vim.lsp.buf.format()
               end,
           })
       end

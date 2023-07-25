@@ -7,8 +7,9 @@ end
 local servers = {
 	"tsserver",
 	"pyright",
-	"sumneko_lua",
+	"lua_ls",
 	"eslint",
+  "emmet_ls",
 	"bashls",
 	"yamlls",
 	"jsonls",
@@ -33,7 +34,7 @@ local on_attach = require('plugins.lsp.lsp-handlers').on_attach
 
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local function organize_imports()
     local params = {
