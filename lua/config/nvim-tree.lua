@@ -17,7 +17,7 @@ if status_ok then
       group_empty = true,
     },
     filters = {
-      dotfiles = true,
+      dotfiles = false,
     },
     respect_buf_cwd = true,
     sync_root_with_cwd = true,
