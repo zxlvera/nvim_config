@@ -40,9 +40,9 @@ if cmp_status_ok and snip_status_ok then
     end, { 'i', 's' }),
   }),
   sources = {
+    { name = 'luasnip' },
     { name = 'nvim_lsp' },
     { name = 'buffer' },
-    { name = 'luasnip' },
   },
 }
 
