@@ -7,11 +7,6 @@ if status_ok then
     },
     view = {
       adaptive_size = true,
-      mappings = {
-        list = {
-          { key = "u", action = "dir_up" },
-        },
-      },
     },
     renderer = {
       group_empty = true,
