@@ -40,12 +40,13 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.gitsigns')
   require('config.nvim-tree')
   require('config.null-ls')
+  require('config.onedark')
   require('config.telescope')
   require('config.trouble')
   require('config.which-key')
 
   -- Key Mappings
-  cmd[[colorscheme nord]]
+  cmd[[colorscheme onedark]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
