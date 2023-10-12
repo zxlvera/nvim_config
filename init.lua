@@ -46,7 +46,7 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.which-key')
 
   -- Key Mappings
-  cmd[[colorscheme onedark]]
+  cmd[[colorscheme catppuccin]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
