@@ -39,14 +39,16 @@ if vim.fn.exists("g:vscode") == 0 then
   require('config.commented')
   require('config.gitsigns')
   require('config.nvim-tree')
-  require('config.null-ls')
+  -- require('config.null-ls')
   require('config.onedark')
   require('config.telescope')
   require('config.trouble')
+  require('config.nvim-treesitter')
+  --require('config.navigator')
   require('config.which-key')
 
   -- Key Mappings
-  cmd[[colorscheme catppuccin]]
+  cmd[[colorscheme gruvbox-material]]
   map('i', 'jk', '<ESC>')
   map("n", "<Leader>h", ":nohlsearch<CR>", { silent = true })
   map("n", "<C-q>", ":q<CR>")
@@ -68,6 +70,7 @@ if vim.fn.exists("g:vscode") == 0 then
   map("n", "<Leader>fh", ":Telescope help_tags<CR>")
 
   -- Trouble Keymaps
+  
   map("n", "<leader>xx", "<cmd>Trouble<cr>",
     {silent = true, noremap = true}
   )
@@ -89,10 +92,10 @@ if vim.fn.exists("g:vscode") == 0 then
   map("n", "gi", "<cmd>Trouble lsp_implementations<cr>",
     {silent = true, noremap = true}
   )
-  --[[ map("n", "gd", "<cmd>Trouble lsp_definitions<cr>",
-    {silent = true, noremap = true}
-  )]]-- 
-  map("n", "gD", "<cmd>Trouble lsp_type_definitions<cr>",
+   map("n", "gd", "<cmd>Trouble lsp_definitions<cr>",
     {silent = true, noremap = true}
   )
+  map("n", "gD", "<cmd>Trouble lsp_type_definitions<cr>",
+    {silent = true, noremap = true}
+  ) 
 end

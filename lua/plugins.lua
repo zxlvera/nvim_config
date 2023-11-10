@@ -35,6 +35,17 @@ return require('packer').startup(function(use)
   use { 'folke/trouble.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
   }
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+  use({
+    'ray-x/navigator.lua',
+    requires = {
+        { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+        { 'neovim/nvim-lspconfig' },
+    },
+  })
   use { 'jose-elias-alvarez/null-ls.nvim', 
     requires = {{ 'nvim-lua/plenary.nvim'}}
   }
@@ -50,6 +61,7 @@ return require('packer').startup(function(use)
   use 'sainnhe/gruvbox-material'
   use 'arcticicestudio/nord-vim'
   use 'catppuccin/nvim'
+  use 'sainnhe/everforest'
   use 'navarasu/onedark.nvim'
   use 'nvim-lualine/lualine.nvim'
   use 'folke/which-key.nvim'
