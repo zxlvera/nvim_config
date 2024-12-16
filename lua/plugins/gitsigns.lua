@@ -1,6 +1,8 @@
-local status_ok, gitsigns = pcall(require, "gitsigns")
-if status_ok then
-  return gitsigns.setup({
+local Plugin = {'lewis6991/gitsigns.nvim'}
+
+Plugin.lazy = false
+
+Plugin.opts = {
     current_line_blame = true,
     on_attach = function(bufnr)
     local gs = package.loaded.gitsigns
@@ -40,5 +42,6 @@ if status_ok then
     -- Text object
     map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
   end
-  })
-end
+  }
+
+return Plugin

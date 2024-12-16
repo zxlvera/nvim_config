@@ -8,10 +8,11 @@ return require('packer').startup(function(use)
 
   -- Sorting, Completion and linting
   use 'winston0410/commented.nvim'
+
   use {
-    'williamboman/nvim-lsp-installer',
-    'neovim/nvim-lspconfig',
-}
+    "williamboman/mason.nvim"
+  }
+
   use {
     'neoclide/coc.nvim', 
     branch =  'release'
