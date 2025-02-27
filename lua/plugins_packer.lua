@@ -18,6 +18,9 @@ return require('packer').startup(function(use)
     branch =  'release'
   }
 
+  -- Indent
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Autocomplete
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'

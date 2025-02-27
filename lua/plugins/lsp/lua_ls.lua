@@ -4,6 +4,9 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.lua_ls.setup({
   capabilities = lsp_capabilities,
   settings = {
+    basedpyright = {
+      typeCheckingMode = "off",
+    },
     Lua = {
       workspace = {
         checkThirdParty = false
@@ -18,8 +21,8 @@ lspconfig.lua_ls.setup({
     local path = client.workspace_folders[1].name
 
     -- Don't do anything if there is project local config
-    if vim.uv.fs_stat(join(path, '.luarc.json')) 
-      or vim.uv.fs_stat(join(path, '.luarc.jsonc'))
+    if vim.uv.fs_stat(join(path, '.luarc.json'))
+        or vim.uv.fs_stat(join(path, '.luarc.jsonc'))
     then
       return
     end
@@ -37,7 +40,7 @@ lspconfig.lua_ls.setup({
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'}
+        globals = { 'vim' }
       },
       workspace = {
         checkThirdParty = false,
@@ -57,4 +60,3 @@ lspconfig.lua_ls.setup({
     )
   end,
 })
-
