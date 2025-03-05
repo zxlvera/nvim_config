@@ -37,6 +37,8 @@ vim.keymap.set({ 'n' }, '<Leader>h', ':nohlsearch<CR>', { desc = 'Toggle highlig
 -- Basic clipboard interaction
 vim.keymap.set({ 'n', 'x' }, 'gy', '"+y', { desc = 'Copy to clipboard' })
 vim.keymap.set({ 'n', 'x' }, 'gp', '"+p', { desc = 'Paste clipboard content' })
+vim.o.list = true
+vim.o.listchars = 'tab:» ,lead:•,trail:•'
 
 -- Commands
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', { desc = 'Save buffer' })

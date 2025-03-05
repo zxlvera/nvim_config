@@ -17,7 +17,8 @@ return {
         commented = true, -- Show virtual text alongside comment
       })
 
-      dap_python.setup("/Users/vera.lim/.local/share/virtualenvs/debugpy/bin/python")
+      local path = os.getenv("HOME") .. "/.virtualenvs/debugpy/bin/python"
+      dap_python.setup(path)
 
       vim.fn.sign_define("DapBreakpoint", {
         text = "",
