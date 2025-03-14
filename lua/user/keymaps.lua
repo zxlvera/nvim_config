@@ -42,3 +42,4 @@ vim.o.listchars = 'tab:» ,lead:•,trail:•'
 
 -- Commands
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', { desc = 'Save buffer' })
+vim.opt.laststatus = 3
