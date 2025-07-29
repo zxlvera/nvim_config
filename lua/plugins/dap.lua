@@ -18,7 +18,7 @@ return {
       })
 
       local path = os.getenv("HOME") .. "/.virtualenvs/debugpy/bin/python"
-      dap_python.setup(path)
+      dap_python.setup("uv")
 
       vim.fn.sign_define("DapBreakpoint", {
         text = "",
@@ -75,12 +75,16 @@ return {
 
       -- Keymap to terminate debugging
       vim.keymap.set("n", "<leader>dq", function()
-        require("dap").terminate()
+        dap.terminate()
       end, opts)
 
       -- Toggle DAP UI
       vim.keymap.set("n", "<leader>du", function()
         dapui.toggle()
+      end, opts)
+
+      vim.keymap.set("n", "<leader>dx", function()
+        dapui.close()
       end, opts)
     end,
   },

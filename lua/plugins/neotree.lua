@@ -6,7 +6,7 @@ Plugin.lazy = false
 
 Plugin.dependencies = {
   "nvim-lua/plenary.nvim",
-  "nvim-tree/nvim-web-devicons",     -- not strictly required, but recommended
+  "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
   "MunifTanjim/nui.nvim",
 }
 
@@ -20,6 +20,7 @@ function Plugin.config()
   vim.keymap.set('n', '<leader>e', '<cmd>Neotree filesystem toggle<cr>', { desc = 'Toggle file explorer' })
 
   require('neo-tree').setup({
+
     filesystem = {
       commands = {
         avante_add_files = function(state)
@@ -45,6 +46,7 @@ function Plugin.config()
         end,
       },
       window = {
+        position = "right",
         mappings = {
           ['oa'] = 'avante_add_files',
         },

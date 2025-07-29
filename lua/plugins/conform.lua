@@ -5,7 +5,7 @@ return {
   keys = {
     {
       -- Customize or remove this keymap to your liking
-      "<C-f>",
+      "<leadder>gb",
       function()
         require("conform").format({ async = true })
       end,
@@ -20,7 +20,7 @@ return {
     -- Define your formatters
     formatters_by_ft = {
       lua = { "stylua" },
-      python = { "ruff_organize_imports", "ruff", "isort", "black" },
+      python = { "ruff_organize_imports", "ruff_format" },
       javascript = { "prettierd", "prettier", stop_after_first = true },
     },
     -- Set default options
