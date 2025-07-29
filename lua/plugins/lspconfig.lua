@@ -85,6 +85,31 @@ return {
         end
       end
 
+      local group = vim.api.nvim_create_augroup('lsp_cmds', { clear = true })
+      vim.api.nvim_create_autocmd('LspAttach', {
+        group = group,
+        desc = 'LSP actions',
+        callback = function(event)
+          local bufmap = function(mode, lhs, rhs, desc)
+            local opts = { buffer = event.buf, desc = desc }
+            vim.keymap.set(mode, lhs, rhs, opts)
+          end
+
+          -- You can search each function in the help page.
+          -- For example :help vim.lsp.buf.hover()
+
+          bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', 'Hover documentation')
+          bufmap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', 'Show function signature')
+          bufmap('n', 'gS', '<cmd>lua vim.lsp.buf.rename()<cr>', 'Rename symbol')
+          bufmap('n', 'gb', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', 'Format buffer')
+          bufmap('n', 'gC', '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Execute code action')
+          bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', 'Show line diagnostic')
+          bufmap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', 'Previous diagnostic')
+          bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', 'Next diagnostic')
+        end
+      })
+
+
       lspconfig.ruff.setup({
         on_attach = on_attach_ruff,
         init_options = {
@@ -126,11 +151,6 @@ return {
       })
       vim.lsp.handlers["textDocument/signatureHelp"] =
           vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
-
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end,
   },
 }
