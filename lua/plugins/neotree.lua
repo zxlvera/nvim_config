@@ -46,7 +46,7 @@ function Plugin.config()
         end,
       },
       window = {
-        position = "right",
+        position = "left",
         mappings = {
           ['oa'] = 'avante_add_files',
         },

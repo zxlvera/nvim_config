@@ -54,11 +54,6 @@ function Plugin.init()
   vim.keymap.set('n', '<leader>fs', '<cmd>Telescope current_buffer_fuzzy_find<cr>', {
     desc = 'Buffer local search'
   })
-  vim.keymap.set("n", "<leader>ds", function()
-    require("telescope.builtin").lsp_document_symbols({ symbols = { "method", "function" } })
-  end, {
-    desc = "List LSP document symbols"
-  })
   vim.keymap.set("n", "gr", '<cmd>Telescope lsp_references<cr>', {
     desc = "List LSP references"
   })
@@ -70,9 +65,6 @@ function Plugin.init()
   })
   vim.keymap.set("n", "go", '<cmd>Telescope lsp_type_definitions<cr>', {
     desc = "List LSP type definitions"
-  })
-  vim.keymap.set("n", "<leader>ws", '<cmd>Telescope lsp_workspace_symbols<cr>', {
-    desc = "List LSP workspace symbols"
   })
 end
 

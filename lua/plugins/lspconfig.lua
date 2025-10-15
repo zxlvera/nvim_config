@@ -26,9 +26,12 @@ return {
     lazy = false,
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({ capabilities = capabilities })
-      lspconfig.clangd.setup({ capabilities = capabilities })
+      vim.lsp.config('lua_ls', {
+        capabilities = capabilities
+      })
+      vim.lsp.config('clangd', {
+        capabilities = capabilities
+      })
 
       local on_attach_pyright = function(client, _)
         -- Disable all capabilities except hoverProvider
@@ -57,7 +60,7 @@ return {
 
 
       -- Configure pyright
-      lspconfig.pyright.setup({
+      vim.lsp.config('pyright', {
         on_attach = on_attach_pyright,
         capabilities = (function()
           local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -110,7 +113,7 @@ return {
       })
 
 
-      lspconfig.ruff.setup({
+      vim.lsp.config('ruff', {
         on_attach = on_attach_ruff,
         init_options = {
           settings = {

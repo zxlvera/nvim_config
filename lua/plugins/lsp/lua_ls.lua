@@ -1,7 +1,7 @@
-local lspconfig = require('lspconfig')
+local lspconfig = vim.lsp.config['luals']
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lspconfig.lua_ls.setup({
+lspconfig = {
   capabilities = lsp_capabilities,
   settings = {
     Lua = {
@@ -56,4 +56,6 @@ lspconfig.lua_ls.setup({
       nvim_settings
     )
   end,
-})
+}
+
+vim.lsp.enable('luals')

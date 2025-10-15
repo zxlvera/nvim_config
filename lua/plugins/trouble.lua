@@ -15,18 +15,23 @@ return {
     },
     {
       "<leader>cs",
-      "<cmd>Trouble symbols toggle focus=true win.position=bottom<cr>",
+      "<cmd>Trouble symbols toggle focus=true<cr>",
       desc = "Symbols (Trouble)",
     },
     {
       "<leader>cl",
-      "<cmd>Trouble lsp toggle focus=true win.position=bottom<cr>",
+      "<cmd>Trouble lsp toggle focus=true<cr>",
       desc = "LSP Definitions / references / ... (Trouble)",
     },
     {
       "<leader>xL",
       "<cmd>Trouble loclist toggle<cr>",
       desc = "Location List (Trouble)",
+    },
+    {
+      "<leader>ds",
+      "<cmd>Trouble lsp_document_symbols toggle win.position=right<cr>",
+      desc = "Document Symbol (Trouble)",
     },
     {
       "<leader>xQ",
