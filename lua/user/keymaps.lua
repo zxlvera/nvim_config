@@ -31,6 +31,14 @@ vim.g.mapleader = ' '
 -- )
 
 -- Shortcuts
+vim.keymap.set('x', 'an', function()
+  vim.lsp.buf.selection_range('outer')
+end, { desc = "vim.lsp.buf.selection_range('outer')" })
+
+vim.keymap.set('x', 'in', function()
+  vim.lsp.buf.selection_range('inner')
+end, { desc = "vim.lsp.buf.selection_range('inner')" })
+
 vim.keymap.set({ 'i' }, 'jk', '<ESC>', { desc = 'Shortcut to Insert mode' })
 vim.keymap.set({ 'n' }, '<Leader>h', ':nohlsearch<CR>', { desc = 'Toggle highlight' })
 

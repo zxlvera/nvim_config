@@ -38,9 +38,9 @@ return {
     },
   },
   keys = {
-    { '<C-a>',      '<cmd>Telescope codecompanion<cr>',  mode = { 'n', 'v' } },
-    { '<leader>aa', '<cmd>CodeCompanionChat Toggle<cr>', mode = { 'n', 'v' } },
-    { 'ga',         '<cmd>CodeCompanionChat Add<cr>',    mode = { 'v' } },
+    { '<leader>x1', '<cmd>Telescope codecompanion<cr>',  mode = { 'n', 'v' } },
+    { '<leader>x2', '<cmd>CodeCompanionChat Toggle<cr>', mode = { 'n', 'v' } },
+    { '<leader>x3', '<cmd>CodeCompanionChat Add<cr>',    mode = { 'v' } },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
